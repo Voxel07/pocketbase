@@ -8,7 +8,7 @@ RUN apk --no-cache add ca-certificates
 WORKDIR /pb
 
 # Download PocketBase
-ARG PB_VERSION=0.34.2
+ARG PB_VERSION=0.35.0
 ADD https://github.com/pocketbase/pocketbase/releases/download/v${PB_VERSION}/pocketbase_${PB_VERSION}_linux_amd64.zip /tmp/pb.zip
 RUN unzip /tmp/pb.zip -d /pb/ && \
     chmod +x /pb/pocketbase && \
